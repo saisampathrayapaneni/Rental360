@@ -1,0 +1,173 @@
+[
+  {
+    "equipment_id": "EQ-1332",
+    "equipment_name": "Genie S-65",
+    "category": "Aerial Lift",
+    "branch_id": "BR-03",
+    "utilization_pct": 29.4,
+    "z_score": 2.25,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1292",
+    "equipment_name": "Haulotte HA20 RTJ",
+    "category": "Aerial Lift",
+    "branch_id": "BR-01",
+    "utilization_pct": 29.8,
+    "z_score": 2.3,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1334",
+    "equipment_name": "JLG 450AJ",
+    "category": "Aerial Lift",
+    "branch_id": "BR-05",
+    "utilization_pct": 33.1,
+    "z_score": 2.71,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1318",
+    "equipment_name": "Haulotte HA20 RTJ",
+    "category": "Aerial Lift",
+    "branch_id": "BR-02",
+    "utilization_pct": 33.9,
+    "z_score": 2.82,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1084",
+    "equipment_name": "Komatsu D61",
+    "category": "Bulldozer",
+    "branch_id": "BR-05",
+    "utilization_pct": 47.1,
+    "z_score": 2.22,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1095",
+    "equipment_name": "Case 1150M",
+    "category": "Bulldozer",
+    "branch_id": "BR-08",
+    "utilization_pct": 51.0,
+    "z_score": 2.55,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1106",
+    "equipment_name": "Komatsu D61",
+    "category": "Bulldozer",
+    "branch_id": "BR-01",
+    "utilization_pct": 51.1,
+    "z_score": 2.55,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1411",
+    "equipment_name": "Hamm H 7i",
+    "category": "Compactor",
+    "branch_id": "BR-01",
+    "utilization_pct": 34.7,
+    "z_score": 2.06,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1414",
+    "equipment_name": "Caterpillar CS56",
+    "category": "Compactor",
+    "branch_id": "BR-06",
+    "utilization_pct": 34.9,
+    "z_score": 2.08,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1131",
+    "equipment_name": "Manitowoc Grove GMK",
+    "category": "Crane",
+    "branch_id": "BR-06",
+    "utilization_pct": 29.5,
+    "z_score": 2.31,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1065",
+    "equipment_name": "Hitachi ZX135",
+    "category": "Excavator",
+    "branch_id": "BR-01",
+    "utilization_pct": 48.1,
+    "z_score": 2.01,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1052",
+    "equipment_name": "Caterpillar 320",
+    "category": "Excavator",
+    "branch_id": "BR-04",
+    "utilization_pct": 50.9,
+    "z_score": 2.2,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1013",
+    "equipment_name": "Caterpillar 320",
+    "category": "Excavator",
+    "branch_id": "BR-03",
+    "utilization_pct": 68.5,
+    "z_score": 3.37,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1007",
+    "equipment_name": "John Deere 130G",
+    "category": "Excavator",
+    "branch_id": "BR-05",
+    "utilization_pct": 76.0,
+    "z_score": 3.87,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1200",
+    "equipment_name": "Crown C-5",
+    "category": "Forklift",
+    "branch_id": "BR-07",
+    "utilization_pct": 37.1,
+    "z_score": 2.83,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1202",
+    "equipment_name": "Crown C-5",
+    "category": "Forklift",
+    "branch_id": "BR-04",
+    "utilization_pct": 42.0,
+    "z_score": 3.4,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1233",
+    "equipment_name": "Cummins C100D6",
+    "category": "Generator",
+    "branch_id": "BR-05",
+    "utilization_pct": 51.6,
+    "z_score": 2.49,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1258",
+    "equipment_name": "Kohler 60REOZ",
+    "category": "Generator",
+    "branch_id": "BR-01",
+    "utilization_pct": 87.0,
+    "z_score": 5.06,
+    "flag": "hot_outlier"
+  },
+  {
+    "equipment_id": "EQ-1356",
+    "equipment_name": "Freightliner M2 106",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-05",
+    "utilization_pct": 40.5,
+    "z_score": 3.58,
+    "flag": "hot_outlier"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "remainder__rolling_3m": 0.3591,
+  "remainder__time_idx": 0.0998,
+  "remainder__lag_1": 0.0912,
+  "remainder__month_sin": 0.0775,
+  "remainder__month_cos": 0.0743,
+  "cat__category_Excavator": 0.0224,
+  "cat__category_Forklift": 0.0222,
+  "cat__category_Generator": 0.022,
+  "cat__branch_id_BR-05": 0.0219,
+  "cat__branch_id_BR-03": 0.0208,
+  "cat__branch_id_BR-08": 0.0199,
+  "cat__branch_id_BR-01": 0.0195,
+  "cat__branch_id_BR-06": 0.0186,
+  "cat__branch_id_BR-07": 0.0184,
+  "cat__category_Compactor": 0.0174,
+  "cat__category_Aerial Lift": 0.0171,
+  "cat__category_Truck & Trailer": 0.0168,
+  "cat__branch_id_BR-02": 0.0165,
+  "cat__branch_id_BR-04": 0.0164,
+  "cat__category_Bulldozer": 0.0154,
+  "cat__category_Crane": 0.0129
+}

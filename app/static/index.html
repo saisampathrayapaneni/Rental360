@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rental360 — equipment rental analytics dashboard. Synthetic demo data for portfolio demonstration.">
+  <title>Rental360 — Equipment Rental Analytics</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-mark" aria-hidden="true">R3</div>
+      <div class="brand">
+        <div>
+          <div class="brand-name">Rental<span>360</span></div>
+          <div class="brand-tag">Equipment rental analytics</div>
+        </div>
+      </div>
+      <span class="badge badge-synthetic" title="All figures are generated synthetic data for demonstration purposes">Synthetic demo data</span>
+      <div class="header-spacer"></div>
+      <span class="badge badge-live" id="api-status" hidden>API connected</span>
+      <div class="header-meta" id="period-label">Loading period…</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-intro">
+      <h1>Rental performance at a glance</h1>
+      <p>Revenue, utilization, branch performance, demand forecast and top customers —
+        all from the Rental360 warehouse. Figures are synthetic and generated for
+        demo and portfolio purposes.</p>
+    </div>
+
+    <div class="error-banner" id="error-banner" hidden role="alert">
+      <div>
+        <strong>Couldn&rsquo;t reach the Rental360 API</strong>
+        <span id="error-detail">The dashboard couldn&rsquo;t load live data. Check that the backend is running, then try again.</span>
+      </div>
+      <button type="button" id="retry-btn">Retry</button>
+    </div>
+
+    <!-- KPI cards -->
+    <section class="kpi-grid" id="kpi-grid" aria-label="Key performance indicators">
+      <article class="kpi-card">
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-value skeleton" id="kpi-revenue">&mdash;</div>
+        <div class="kpi-sub" id="kpi-revenue-sub">Loading…</div>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Total Rentals</div>
+        <div class="kpi-value skeleton" id="kpi-rentals">&mdash;</div>
+        <div class="kpi-sub" id="kpi-rentals-sub">Loading…</div>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Avg Utilization</div>
+        <div class="kpi-value skeleton" id="kpi-utilization">&mdash;</div>
+        <div class="kpi-sub" id="kpi-utilization-sub">Loading…</div>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Idle Equipment</div>
+        <div class="kpi-value skeleton" id="kpi-idle">&mdash;</div>
+        <div class="kpi-sub" id="kpi-idle-sub">Loading…</div>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Top Branch</div>
+        <div class="kpi-value skeleton" id="kpi-top-branch">&mdash;</div>
+        <div class="kpi-sub" id="kpi-top-branch-sub">Loading…</div>
+      </article>
+    </section>
+
+    <div class="section-grid">
+      <!-- Revenue trend -->
+      <section class="card" aria-labelledby="revenue-title">
+        <div class="card-head">
+          <div class="head-text">
+            <h2 id="revenue-title">Revenue trend</h2>
+            <p>Revenue and rental volume over time.</p>
+          </div>
+          <div class="segmented" role="group" aria-label="Revenue granularity">
+            <button type="button" id="gran-month" aria-pressed="true">Monthly</button>
+            <button type="button" id="gran-quarter" aria-pressed="false">Quarterly</button>
+          </div>
+        </div>
+        <div class="chart-wrap" id="revenue-chart-wrap">
+          <canvas id="revenue-chart" aria-label="Revenue trend chart" role="img"></canvas>
+        </div>
+        <div class="loading-line" id="revenue-loading"><span class="spinner" aria-hidden="true"></span> Loading revenue trend…</div>
+        <div class="empty-state" id="revenue-empty" hidden><strong>No revenue data</strong>No data for this period.</div>
+      </section>
+
+      <div class="two-col">
+        <!-- Branch performance -->
+        <section class="card" aria-labelledby="branch-title">
+          <div class="card-head">
+            <div class="head-text">
+              <h2 id="branch-title">Branch performance</h2>
+              <p>Total revenue by branch.</p>
+            </div>
+          </div>
+          <div class="chart-wrap short" id="branch-chart-wrap">
+            <canvas id="branch-chart" aria-label="Branch revenue chart" role="img"></canvas>
+          </div>
+          <div class="loading-line" id="branch-loading"><span class="spinner" aria-hidden="true"></span> Loading branches…</div>
+          <div class="empty-state" id="branch-empty" hidden><strong>No branch data</strong>No data for this filter.</div>
+          <div class="table-scroll">
+            <table id="branch-table">
+              <thead>
+                <tr><th>Branch</th><th class="num">Rentals</th><th class="num">Revenue</th><th class="num">Avg value</th><th class="num">Avg days</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Demand forecast -->
+        <section class="card" aria-labelledby="forecast-title">
+          <div class="card-head">
+            <div class="head-text">
+              <h2 id="forecast-title">Demand forecast</h2>
+              <p id="forecast-subtitle">Predicted rentals for next month, by category.</p>
+            </div>
+          </div>
+          <div class="filters">
+            <label for="forecast-branch">Branch</label>
+            <select id="forecast-branch">
+              <option value="">All branches</option>
+            </select>
+          </div>
+          <div class="chart-wrap short" id="forecast-chart-wrap">
+            <canvas id="forecast-chart" aria-label="Demand forecast chart" role="img"></canvas>
+          </div>
+          <div class="loading-line" id="forecast-loading"><span class="spinner" aria-hidden="true"></span> Loading forecast…</div>
+          <div class="empty-state" id="forecast-empty" hidden><strong>No forecast available</strong><span id="forecast-empty-text">No forecast data for this filter.</span></div>
+          <p class="card-note warning" id="forecast-note" hidden></p>
+          <p class="card-note" id="forecast-note-ok" hidden></p>
+        </section>
+      </div>
+
+      <!-- Top customers -->
+      <section class="card" aria-labelledby="customers-title">
+        <div class="card-head">
+          <div class="head-text">
+            <h2 id="customers-title">Top customers</h2>
+            <p>Ranked by lifetime revenue.</p>
+          </div>
+        </div>
+        <div class="loading-line" id="customers-loading"><span class="spinner" aria-hidden="true"></span> Loading top customers…</div>
+        <div class="empty-state" id="customers-empty" hidden><strong>No customers yet</strong>No customer data available.</div>
+        <div class="table-scroll">
+          <table id="customers-table">
+            <thead>
+              <tr><th>#</th><th>Customer</th><th>Type</th><th>Location</th><th class="num">Rentals</th><th class="num">Lifetime revenue</th><th class="num">Avg value</th><th>Last rental</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Equipment utilization -->
+      <section class="card" aria-labelledby="equipment-title">
+        <div class="card-head">
+          <div class="head-text">
+            <h2 id="equipment-title">Equipment utilization</h2>
+            <p>Utilization is rented days ÷ days in service. Items under 10% are flagged as idle.</p>
+          </div>
+        </div>
+        <div class="filters">
+          <label for="eq-category">Category</label>
+          <select id="eq-category">
+            <option value="">All categories</option>
+          </select>
+          <label for="eq-branch">Branch</label>
+          <select id="eq-branch">
+            <option value="">All branches</option>
+          </select>
+          <span class="filter-count" id="eq-count"></span>
+        </div>
+        <div class="loading-line" id="equipment-loading"><span class="spinner" aria-hidden="true"></span> Loading equipment…</div>
+        <div class="empty-state" id="equipment-empty" hidden><strong>No data for this filter</strong>Try a different category or branch.</div>
+        <div class="table-scroll">
+          <table id="equipment-table">
+            <thead>
+              <tr><th>Equipment</th><th>Category</th><th>Branch</th><th class="num">Daily rate</th><th>Status</th><th class="num">Rented days</th><th class="num">Rentals</th><th>Utilization</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- AI Assistant -->
+      <section class="card" aria-labelledby="assistant-title">
+        <div class="card-head">
+          <div class="head-text">
+            <h2 id="assistant-title">AI Assistant</h2>
+            <p>Ask a question about the rental data. Answers are computed from the warehouse — expand &ldquo;How this was calculated&rdquo; to see the SQL and the evidence rows.</p>
+          </div>
+        </div>
+        <div class="chips" id="suggestion-chips">
+          <button type="button" class="chip">Which branch generated the most revenue?</button>
+          <button type="button" class="chip">Which equipment is sitting idle?</button>
+          <button type="button" class="chip">What is the predicted demand next month?</button>
+          <button type="button" class="chip">Who are our top customers?</button>
+        </div>
+        <div class="chat-log" id="chat-log" aria-live="polite">
+          <div class="chat-msg assistant"><span class="intent">Rental360 Assistant</span>Hi — I can answer questions about revenue, branches, equipment utilization, customers and the demand forecast. Try one of the suggested questions, or ask your own.</div>
+        </div>
+        <form class="chat-form" id="chat-form">
+          <input type="text" id="chat-input" placeholder="Ask about revenue, idle equipment, forecasts…" autocomplete="off" aria-label="Ask the AI assistant a question">
+          <button type="submit" class="btn" id="chat-send">Send</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p><strong>Rental360</strong> — equipment rental analytics dashboard.</p>
+    <p>All data shown is <strong>synthetic demo data</strong>, generated for demonstration and portfolio purposes. It does not represent any real company, customer, or transaction.</p>
+  </footer>
+</body>
+</html>

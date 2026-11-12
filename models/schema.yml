@@ -1,0 +1,48 @@
+version: 2
+
+# dbt-style documentation + tests for the Rental360 models.
+# These run under real dbt (Postgres target) unchanged; the same checks are
+# implemented in etl/data_quality.py for the SQLite runtime.
+models:
+  - name: stg_rentals
+    description: Cleaned rental facts, one row per rental. Cancelled rentals carry billable_revenue = 0.
+    columns:
+      - name: rental_id
+        tests: [unique, not_null]
+      - name: equipment_id
+        tests: [not_null, relationships: {to: ref('stg_equipment'), field: equipment_id}]
+      - name: total_revenue
+        tests: [not_null]
+      - name: status
+        tests: [accepted_values: {values: ['completed', 'active', 'cancelled']}]
+  - name: stg_equipment
+    description: Equipment dimension with derived age in years.
+    columns:
+      - name: equipment_id
+        tests: [unique, not_null]
+      - name: daily_rate
+        tests: [not_null]
+  - name: mart_revenue_by_branch
+    description: Revenue and rental counts per branch.
+    columns:
+      - name: branch_id
+        tests: [unique, not_null]
+  - name: mart_equipment_utilization
+    description: Rented days vs days in service per equipment item.
+    columns:
+      - name: equipment_id
+        tests: [unique, not_null]
+      - name: utilization_pct
+        tests: [not_null]
+  - name: mart_monthly_demand
+    description: Monthly rentals/revenue per category and branch (forecast training grain).
+    columns:
+      - name: year_month
+        tests: [not_null]
+      - name: rental_count
+        tests: [not_null]
+  - name: mart_top_customers
+    description: Lifetime value per customer.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]

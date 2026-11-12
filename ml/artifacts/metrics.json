@@ -1,0 +1,51 @@
+{
+  "model": "RandomForestRegressor",
+  "mae": 2.0038,
+  "rmse": 2.5899,
+  "per_category_mae": {
+    "Aerial Lift": 1.7512,
+    "Bulldozer": 1.7846,
+    "Compactor": 1.0171,
+    "Crane": 1.9291,
+    "Excavator": 2.2881,
+    "Forklift": 2.5943,
+    "Generator": 2.731,
+    "Truck & Trailer": 1.9164
+  },
+  "train_date_range": [
+    "2024-03",
+    "2026-06"
+  ],
+  "test_date_range": [
+    "2026-08",
+    "2026-10"
+  ],
+  "test_target_months": [
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "feature_list": [
+    "month_sin",
+    "month_cos",
+    "time_idx",
+    "lag_1",
+    "rolling_3m",
+    "category",
+    "branch_id"
+  ],
+  "n_train": 1736,
+  "n_test": 186,
+  "model_comparison": {
+    "GradientBoostingRegressor": {
+      "mae": 2.0054,
+      "rmse": 2.5587
+    },
+    "RandomForestRegressor": {
+      "mae": 2.0038,
+      "rmse": 2.5899
+    }
+  },
+  "forecast_month": "2026-11",
+  "data": "synthetic"
+}

@@ -1,0 +1,436 @@
+[
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-01",
+    "predicted_rentals": 2.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-02",
+    "predicted_rentals": 2.7,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-03",
+    "predicted_rentals": 5.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.1,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-05",
+    "predicted_rentals": 3.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-06",
+    "predicted_rentals": 3.1,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-07",
+    "predicted_rentals": 2.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Aerial Lift",
+    "branch_id": "BR-08",
+    "predicted_rentals": 3.7,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-01",
+    "predicted_rentals": 1.7,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-02",
+    "predicted_rentals": 2.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-03",
+    "predicted_rentals": 2.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-04",
+    "predicted_rentals": 5.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-05",
+    "predicted_rentals": 2.9,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-06",
+    "predicted_rentals": 2.1,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-07",
+    "predicted_rentals": 3.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Bulldozer",
+    "branch_id": "BR-08",
+    "predicted_rentals": 3.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-01",
+    "predicted_rentals": 1.8,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-02",
+    "predicted_rentals": 2.1,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-03",
+    "predicted_rentals": 2.7,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-05",
+    "predicted_rentals": 2.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-06",
+    "predicted_rentals": 2.6,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-07",
+    "predicted_rentals": 2.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Compactor",
+    "branch_id": "BR-08",
+    "predicted_rentals": 2.8,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-01",
+    "predicted_rentals": 2.1,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-05",
+    "predicted_rentals": 1.4,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-06",
+    "predicted_rentals": 3.4,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-07",
+    "predicted_rentals": 2.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Crane",
+    "branch_id": "BR-08",
+    "predicted_rentals": 4.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-01",
+    "predicted_rentals": 3.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-02",
+    "predicted_rentals": 2.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-03",
+    "predicted_rentals": 4.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-04",
+    "predicted_rentals": 4.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-05",
+    "predicted_rentals": 6.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-06",
+    "predicted_rentals": 5.6,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-07",
+    "predicted_rentals": 3.6,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Excavator",
+    "branch_id": "BR-08",
+    "predicted_rentals": 3.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-01",
+    "predicted_rentals": 3.9,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-02",
+    "predicted_rentals": 7.8,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-03",
+    "predicted_rentals": 4.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.9,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-05",
+    "predicted_rentals": 4.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-06",
+    "predicted_rentals": 4.6,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-07",
+    "predicted_rentals": 4.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Forklift",
+    "branch_id": "BR-08",
+    "predicted_rentals": 5.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-01",
+    "predicted_rentals": 1.8,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-02",
+    "predicted_rentals": 6.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-03",
+    "predicted_rentals": 3.2,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.7,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-05",
+    "predicted_rentals": 4.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-06",
+    "predicted_rentals": 3.8,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-07",
+    "predicted_rentals": 2.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Generator",
+    "branch_id": "BR-08",
+    "predicted_rentals": 3.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-01",
+    "predicted_rentals": 3.3,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-02",
+    "predicted_rentals": 2.4,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-03",
+    "predicted_rentals": 2.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-04",
+    "predicted_rentals": 2.4,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-05",
+    "predicted_rentals": 2.5,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-06",
+    "predicted_rentals": 3.0,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-07",
+    "predicted_rentals": 2.9,
+    "model": "RandomForestRegressor"
+  },
+  {
+    "year_month": "2026-11",
+    "category": "Truck & Trailer",
+    "branch_id": "BR-08",
+    "predicted_rentals": 4.1,
+    "model": "RandomForestRegressor"
+  }
+]

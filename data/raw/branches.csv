@@ -1,0 +1,9 @@
+branch_id,branch_name,city,state,opened_date
+BR-01,Austin North,Austin,TX,2022-03-04
+BR-02,Dallas Metro,Dallas,TX,2016-04-01
+BR-03,Houston Gulf,Houston,TX,2015-04-13
+BR-04,San Antonio River,San Antonio,TX,2018-01-31
+BR-05,Phoenix Desert,Phoenix,AZ,2017-09-30
+BR-06,Denver Front Range,Denver,CO,2017-07-03
+BR-07,Atlanta Peachtree,Atlanta,GA,2016-07-25
+BR-08,Charlotte Queen City,Charlotte,NC,2016-02-24

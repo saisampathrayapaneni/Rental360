@@ -1,0 +1,19 @@
+services:
+  rental360:
+    build: .
+    container_name: rental360
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      - RENTAL360_DB=/app/data/warehouse/rental360.db
+      # Optional: plug in a real LLM provider for the assistant later.
+      # - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      # Persist the warehouse + trained model across restarts.
+      - rental360-data:/app/data/warehouse
+      - rental360-models:/app/ml/artifacts
+    restart: unless-stopped
+
+volumes:
+  rental360-data:
+  rental360-models:
